@@ -1,11 +1,10 @@
-package org.example.core.useCase.address.address;
+package org.example.core.useCase.address;
 
 import org.example.core.domain.model.Address;
 import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.AddressRequest;
 import org.example.core.port.AddressRepository;
 import org.example.core.port.CostumerRepository;
-import org.example.core.useCase.address.SaveAddressUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
