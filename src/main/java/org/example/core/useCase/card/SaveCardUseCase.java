@@ -3,7 +3,7 @@ package org.example.core.useCase.card;
 
 import lombok.RequiredArgsConstructor;
 import org.example.adapters.config.Pass;
-import org.example.core.domain.excecao.NoItemException;
+import org.example.core.domain.exception.NoItemException;
 import org.example.core.domain.model.Card;
 import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.CardRequest;

@@ -1,7 +1,7 @@
 package org.example.core.useCase.payment;
 
 import lombok.RequiredArgsConstructor;
-import org.example.core.domain.excecao.NoItemException;
+import org.example.core.domain.exception.NoItemException;
 import org.example.core.domain.model.Card;
 import org.example.core.domain.model.Debts;
 import org.example.core.domain.model.Payment;
@@ -25,7 +25,6 @@ public class PaymentService {
       private final CardRepository cardRepository;
       private double juros = 0;
       private int parcela = 0;
-      // lembrar de adicionar a quantidade de parcelas
     public Payment insertValueAcordingToDebts(DebstRequestPayment requestPayment, PaymentDto paymentDto) {
 
         Debts debts = debtsRepository.findByExternalIdDebts(requestPayment.getIdexternoDebts()).orElseThrow(() ->
@@ -43,23 +42,23 @@ public class PaymentService {
                 parcela = 2;
             }
             case 2 -> {
-                juros = 0.07; // Juros de 7% para 4 parcelas
+                juros = 0.07;
                 parcela = 4;
             }
             case 3 -> {
-                juros = 0.09; // Juros de 9% para 6 parcelas
+                juros = 0.09;
                 parcela = 6;
             }
             case 4 -> {
-                juros = 0.11; // Juros de 11% para 8 parcelas
+                juros = 0.11;
                 parcela = 8;
             }
             case 5 -> {
-                juros = 0.13; // Juros de 13% para 10 parcelas
+                juros = 0.13;
                 parcela = 10;
             }
             case 6 -> {
-                juros = 0.15; // Juros de 15% para 12 parcelas
+                juros = 0.15;
                 parcela = 12;
 
             }
