@@ -1,4 +1,4 @@
-package org.example.core.useCase.address.card;
+package org.example.core.useCase.card;
 
 import org.example.core.domain.model.Card;
 import org.example.core.domain.model.Costumer;
