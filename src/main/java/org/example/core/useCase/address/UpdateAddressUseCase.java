@@ -2,7 +2,7 @@ package org.example.core.useCase.address;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.example.core.domain.excecao.NoItemException;
+import org.example.core.domain.exception.NoItemException;
 import org.example.core.domain.model.Address;
 import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.AddressRequest;

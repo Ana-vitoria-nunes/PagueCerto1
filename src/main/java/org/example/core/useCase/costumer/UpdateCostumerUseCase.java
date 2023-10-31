@@ -2,17 +2,15 @@ package org.example.core.useCase.costumer;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.example.core.domain.excecao.NoItemException;
 import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.CostumerRequest;
 import org.example.core.port.CostumerRepository;
 import org.springframework.stereotype.Component;
+import org.example.core.domain.exception.NoItemException;
 
 @Component
 @RequiredArgsConstructor
 public class UpdateCostumerUseCase {
-
-    //teste
 
     private final CostumerRepository costumerRepository;
     @Transactional
