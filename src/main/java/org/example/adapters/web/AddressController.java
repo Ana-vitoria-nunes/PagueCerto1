@@ -5,6 +5,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.core.domain.model.dto.requestDto.AddressRequest;
 import org.example.core.domain.model.dto.responseDto.ResponseDto;
+import org.example.core.useCase.address.GetAddressUseCase;
 import org.example.core.useCase.address.SaveAddressUseCase;
 import org.example.core.useCase.address.UpdateAddressUseCase;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -20,7 +21,8 @@ public class AddressController {
 
   private final SaveAddressUseCase saveAddressUseCase;
   private final UpdateAddressUseCase updateAddressUseCase;
-  @PostMapping("/addingAddress")
+  private final GetAddressUseCase getAddressUseCase;
+  @PostMapping("/adicionarEndereco")
   public ResponseEntity addAddress(@Valid @RequestBody AddressRequest addressRequest){
     try{
       saveAddressUseCase.saveAddress(addressRequest);
@@ -43,5 +45,9 @@ public class AddressController {
      }catch (Exception erro){
       return new ResponseEntity<>(erro.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
     }
+  }
+  @GetMapping("/verEndereco")
+  public ResponseEntity getAddress(){
+     return new ResponseEntity<>(getAddressUseCase.findAll(),HttpStatus.OK);
   }
 }

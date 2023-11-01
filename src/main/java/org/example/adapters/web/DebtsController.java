@@ -5,20 +5,19 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.core.domain.model.dto.requestDto.DebtsRequest;
 import org.example.core.domain.model.dto.responseDto.ResponseDto;
+import org.example.core.useCase.debts.GetDebtsUseCase;
 import org.example.core.useCase.debts.SaveDebtsUseCase;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/divida")
 @RequiredArgsConstructor
 public class DebtsController {
     private final SaveDebtsUseCase saveDebtsUseCase;
+    private final GetDebtsUseCase getDebtsUseCase;
     @PostMapping
     public ResponseEntity saveDebts(@Valid @RequestBody DebtsRequest debtsRequest){
         try {
@@ -33,4 +32,9 @@ public class DebtsController {
             return new ResponseEntity<>(new ResponseDto(erro.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @GetMapping("/verDividas")
+    public ResponseEntity getAddress(){
+        return new ResponseEntity<>(getDebtsUseCase.findAllDebts(),HttpStatus.OK);
+    }
+
 }

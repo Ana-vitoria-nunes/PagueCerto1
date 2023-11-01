@@ -3,27 +3,29 @@ package org.example.adapters.web;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.example.core.domain.model.dto.requestDto.CardRequest;
 import org.example.core.domain.model.dto.responseDto.ResponseDto;
+import org.example.core.port.CardRepository;
+import org.example.core.useCase.address.GetAddressUseCase;
+import org.example.core.useCase.card.GetCardUseCase;
 import org.example.core.useCase.card.SaveCardUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/adicionarCartão")
+@RequestMapping("/adicionarCartao")
+@RequiredArgsConstructor
 public class CardController {
-    @Autowired
-    SaveCardUseCase saveCardUseCase;
+    private final  SaveCardUseCase saveCardUseCase;
+    private final GetCardUseCase getCardUseCase;
 
     @PostMapping
     public ResponseEntity save(@Valid @RequestBody CardRequest cardRequest){
@@ -44,6 +46,11 @@ public class CardController {
         } catch (Exception erro){
             return new ResponseEntity<>(new ResponseDto(erro.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @GetMapping("/verCard")
+    public ResponseEntity getAddress(){
+        return new ResponseEntity<>(getCardUseCase.findAll(),HttpStatus.OK);
     }
 
 }
