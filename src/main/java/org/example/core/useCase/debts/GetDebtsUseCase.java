@@ -14,4 +14,5 @@ public class GetDebtsUseCase {
     public List findAllDebts(){
         return debtsRepository.findAll();
     }
+
 }

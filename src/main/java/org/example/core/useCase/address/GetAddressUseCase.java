@@ -15,4 +15,5 @@ public class GetAddressUseCase {
     public List findAll(){
         return addressRepository.findAll();
     }
+
 }

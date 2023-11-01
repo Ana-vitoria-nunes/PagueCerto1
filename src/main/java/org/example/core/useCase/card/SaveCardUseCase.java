@@ -52,7 +52,7 @@ public class SaveCardUseCase {
         DateTimeFormatter dateFormatOutput = DateTimeFormatter.ofPattern("MM/yyyy");
 
         return YearMonth.parse(dto, dateFormatOutput).atDay(1);
-    } // -> método em uma controladora
+    }
 
 
 }

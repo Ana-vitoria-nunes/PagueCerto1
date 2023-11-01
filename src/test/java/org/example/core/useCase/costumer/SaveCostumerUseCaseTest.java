@@ -1,11 +1,9 @@
-package org.example.core.useCase.costmer;
+package org.example.core.useCase.costumer;
 
 import org.example.adapters.config.Pass;
 import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.CostumerRequest;
 import org.example.core.port.CostumerRepository;
-import org.example.core.useCase.costumer.EmailUtils;
-import org.example.core.useCase.costumer.SaveCostumerUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
