@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.core.domain.model.dto.requestDto.CostumerRequest;
 import org.example.core.domain.model.dto.responseDto.ResponseDto;
 import org.example.core.useCase.costumer.GetCostumerUseCase;
+import org.example.core.useCase.costumer.GetOnlyCostumer;
 import org.example.core.useCase.costumer.SaveCostumerUseCase;
 import org.example.core.useCase.costumer.UpdateCostumerUseCase;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -20,9 +21,7 @@ public class CostumerController {
    private final SaveCostumerUseCase saveCostumer;
    private final UpdateCostumerUseCase updateCostumer;
    private final GetCostumerUseCase getCostumer;
-    //tratar excesão do erro de cpf
-    // tratar exesão que senha pode ser repetida
-
+   private final GetOnlyCostumer onlyCostumer;
     @PostMapping
     public ResponseEntity addUser(@Valid @RequestBody CostumerRequest cliente) {
         try {
@@ -58,6 +57,10 @@ public class CostumerController {
     @GetMapping("/data")
     public ResponseEntity getAll(){
         return new ResponseEntity<>(getCostumer.findAll(), HttpStatus.OK);
+    }
+    @GetMapping("/verCliente")
+    public ResponseEntity getCostumer() {
+        return new ResponseEntity(onlyCostumer.findCostumer(),HttpStatus.OK);
     }
 
 }

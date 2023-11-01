@@ -7,6 +7,7 @@ import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.AddressRequest;
 import org.example.core.port.AddressRepository;
 import org.example.core.port.CostumerRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
@@ -29,7 +30,7 @@ public class SaveAddressUseCase {
         newAddress.setCity(addressRequest.getCidade());
         newAddress.setCep(addressRequest.getCep());
 
-        return addressRepository.save(newAddress);
+        return  addressRepository.save(newAddress);
     }
 
 

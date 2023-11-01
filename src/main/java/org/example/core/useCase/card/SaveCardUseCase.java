@@ -23,9 +23,7 @@ import java.time.format.DateTimeFormatter;
 public class SaveCardUseCase {
     private final CardRepository cardRepository;
     private final CostumerRepository costumerRepository;
-    private final ModelMapper mapper;
 
-    // colocar um método para confirmar dados
     public Card saveCard(CardRequest cardRequest) {
         Card newCard = new Card();
 
@@ -35,8 +33,10 @@ public class SaveCardUseCase {
         newCard.generateAndSetExternalIdCartao();
         newCard.setCostumer(costumer);
         newCard.setCostumer(costumer);
+
         String s = Pass.hashCrypto(cardRequest.getCvv());
         String n = Pass.hashCrypto(cardRequest.getNumeroCartao());
+
         newCard.setCvv(s);
         newCard.setNumberCard(n);
         dataParseToFormat(cardRequest.getDataDeValidade());

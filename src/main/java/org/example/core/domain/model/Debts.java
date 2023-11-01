@@ -1,5 +1,6 @@
 package org.example.core.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -27,10 +28,12 @@ public class Debts {
     private BigDecimal debts;
 
     @ManyToOne()
+    @JsonIgnore
     @JoinColumn(name = "externalIdCard")
     private Card externalIdCard;
 
     @ManyToOne()
+    @JsonIgnore
     @JoinColumn(name = "externalIdPayment")
     private Payment externalIdPayment;
 
