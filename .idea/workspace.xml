@@ -5,17 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8b462fb-207a-4a51-b908-2b0c031e64f3" name="Changes" comment="subindo aplicação">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/core/useCase/debts/SaveDebtsUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/core/useCase/debts/SaveDebtsUseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/core/useCase/costumer/GetCostumerUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/core/useCase/costumer/GetCostumerUseCaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/subindoTest" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,32 +43,86 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/vitoria.santos/Documents/PagueCerto1/src/test/java/org/example/core/useCase",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vitoria.santos/Documents/PagueCerto1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vitoria.santos\Documents\PagueCerto1\src\test\java\org\example\core\useCase" />
       <recent name="C:\Users\vitoria.santos\Documents\PagueCerto1\src\test" />
       <recent name="C:\Users\vitoria.santos\Documents\PagueCerto1\src\main" />
       <recent name="C:\Users\vitoria.santos\Documents\PagueCerto1\src\main\java\org\example\core\useCase" />
       <recent name="C:\Users\vitoria.santos\Documents\PagueCerto1\src\main\java\org\example\core\domain\model" />
-      <recent name="C:\Users\vitoria.santos\Documents\PagueCerto1\src\main\java\org\example\core\domain\model\dto\requestDto" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.core.useCase.costumer" />
+      <recent name="org.example.core.useCase.debts" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.core.port" />
       <recent name="org.example.core.domain.model.dto.requestInfoDto" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="SaveDebtsUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GetCostumerUseCaseTest.findAll_shouldReturnAllCustomers">
+    <configuration name="SistemaPagueCerto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.SistemaPagueCerto" />
+      <module name="PagueCerto1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetCostumerUseCaseTest.findAll_shouldReturnAllCustomers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PagueCerto1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.core.useCase.costumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.core.useCase.costumer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.core.useCase.costumer.GetCostumerUseCaseTest" />
+      <option name="METHOD_NAME" value="findAll_shouldReturnAllCustomers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetCostumerUseCaseTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PagueCerto1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.core.useCase.costumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.core.useCase.costumer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.core.useCase.costumer.GetCostumerUseCaseTest" />
+      <option name="METHOD_NAME" value="testFindAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetDebtsUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PagueCerto1" />
       <extension name="coverage">
         <pattern>
@@ -69,15 +131,35 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.core.useCase.debts" />
-      <option name="MAIN_CLASS_NAME" value="org.example.core.useCase.debts.SaveDebtsUseCaseTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.core.useCase.debts.GetDebtsUseCaseTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetDebtsUseCaseTest.testFindAllDebts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PagueCerto1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.core.useCase.debts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.core.useCase.debts" />
+      <option name="MAIN_CLASS_NAME" value="org.example.core.useCase.debts.GetDebtsUseCaseTest" />
+      <option name="METHOD_NAME" value="testFindAllDebts" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SaveDebtsUseCaseTest" />
+        <item itemvalue="JUnit.GetCostumerUseCaseTest.findAll_shouldReturnAllCustomers" />
+        <item itemvalue="JUnit.GetCostumerUseCaseTest.testFindAll" />
+        <item itemvalue="JUnit.GetDebtsUseCaseTest" />
+        <item itemvalue="JUnit.GetDebtsUseCaseTest.testFindAllDebts" />
+        <item itemvalue="Application.SistemaPagueCerto" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698775421564</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="subindo aplicação">
+      <created>1698946016963</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698946016963</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
