@@ -1,10 +1,8 @@
-package org.example.core.useCase.costmer;
+package org.example.core.useCase.costumer;
 
 import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.CostumerRequest;
 import org.example.core.port.CostumerRepository;
-import org.example.core.useCase.costumer.EmailUtils;
-import org.example.core.useCase.costumer.UpdateCostumerUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
