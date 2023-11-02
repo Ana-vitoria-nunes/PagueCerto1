@@ -56,32 +56,31 @@ class GetCostumerUseCaseTest {
 //    }
 @Test
 public void findAll_shouldReturnAllCustomers() {
-    // given
-    List<Card> cardList = new ArrayList<>();
-    Card card1 = new Card();
-    card1.setIdCard(1l);
+
+    Address address = new Address();
+    address.setId_Address(1L);
 
     AddressRequestInfoDto addressRequestInfoDto = new AddressRequestInfoDto();
     List<PaymentInfoDto> paymentInfoDtos = new ArrayList<>();
-    Address address = new Address();
-    address.setId_Address(1L);
+
+
     Costumer costumer = new Costumer(1L,"dgfnhgfhnfh284hn","Ana Silva","ana@gmail.com","ana123", LocalDate.of(2004,05,11),"1578596","34997856241",address);
     CostumerInfoDto costumer1 = new CostumerInfoDto(1L,"Ana Silva","ana@gmail.com",addressRequestInfoDto,paymentInfoDtos);
-    costumer.setName(costumer1.getNome());
-    Card card2 = new Card();
-    card2.setIdCard(2l);
-    cardList.add(card1);
-    cardList.add(card2);
+
+    List<Card> cardList = new ArrayList<>();
+    Card card = new Card();
+
+    card.setCostumer(costumer);
+    card.setIdCard(2l);
+    cardList.add(card);
+
 
     when(cardRepository.findAll()).thenReturn(cardList);
 
-    // when
     List<CostumerInfoDto> actualCustomers = getCostumerUseCase.findAll();
     actualCustomers.add(costumer1);
-    // then
-    assertEquals(1, actualCustomers.size());
-//    assertEquals(1, actualCustomers.get(0).getIdInterno());
-//    assertEquals(2, actualCustomers.get(1).getIdInterno());
+
+    assertEquals(2, actualCustomers.size());
 }
 }
 
