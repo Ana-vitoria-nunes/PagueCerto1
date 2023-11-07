@@ -39,7 +39,7 @@ public class Costumer {
         private String name;
 
         @Column(nullable = false, length = 250, unique = true)
-        @Email(message = "O email precisa conter '.' e '@'")  //Tratar o email
+        @Email(message = "O email precisa conter '.' e '@'")
         private String email;
 
         @Column(nullable = false,unique = true)
@@ -51,7 +51,7 @@ public class Costumer {
         private LocalDate birthDate ;
 
 
-        @Column(nullable = false, unique = true) // -> tratar cpf
+        @Column(nullable = false, unique = true)
         private String cpf;
 
         @Column(nullable = false, length = 15, unique = true)

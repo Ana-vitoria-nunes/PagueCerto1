@@ -1,7 +1,5 @@
 package org.example.core.domain.model.dto.requestDto;
 
-
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;

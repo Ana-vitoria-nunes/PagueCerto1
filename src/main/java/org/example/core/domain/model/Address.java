@@ -52,7 +52,7 @@ public class Address {
 
     @NotBlank(message = "O campo cidade não pode estar em branco")
     @Column(nullable = false,name = "city")
-    @Pattern(regexp = "^[a-zA-Z ]*$") //message = "O campo cidade permite apenas letras ")
+    @Pattern(regexp = "^[a-zA-Z ]*$")
     private String city;
 
     @NotBlank()

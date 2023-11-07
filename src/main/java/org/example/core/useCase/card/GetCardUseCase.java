@@ -2,12 +2,8 @@ package org.example.core.useCase.card;
 
 import lombok.RequiredArgsConstructor;
 import org.example.core.domain.model.Card;
-import org.example.core.domain.model.Costumer;
 import org.example.core.domain.model.dto.requestDto.CardRequest;
-import org.example.core.domain.model.dto.requestDto.CostumerRequest;
-import org.example.core.domain.model.dto.requestInfoDto.CostumerInfoDto;
 import org.example.core.port.CardRepository;
-import org.example.core.useCase.costumer.EmailUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

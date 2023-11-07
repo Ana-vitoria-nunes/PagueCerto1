@@ -1,6 +1,5 @@
 package org.example.core.domain.model.dto.requestDto;
 
-//import com.example.demo.model.Costumer;
 
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
@@ -14,7 +13,6 @@ import lombok.*;
 @EqualsAndHashCode(of = "id")
 @Builder
 public class AddressRequest {
-    //obs: fazer a validação do endereçopara ser real, procurar por cep e aparecer automático tentar pfvr
 
     private String idCostumer;
 
