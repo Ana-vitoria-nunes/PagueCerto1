@@ -27,5 +27,4 @@ public class PaymentController {
            return new ResponseEntity<>(new ResponseDto(erro.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
        }
    }
-   // adicionar o data e o horário para a proxima spring
 }

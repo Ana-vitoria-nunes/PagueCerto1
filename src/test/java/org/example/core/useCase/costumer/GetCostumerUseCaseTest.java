@@ -92,6 +92,8 @@ class GetCostumerUseCaseTest {
         assertEquals(1, costumerInfoDto.getIdInterno());
         assertEquals("Laura", costumerInfoDto.getNome());
         assertEquals("l****@gmail.com", costumerInfoDto.getEmail());
+        assertEquals(costumer.getAddress(),costumerInfoDto.getEndereço());
+
 
         AddressRequestInfoDto addressRequestInfoDto = costumerInfoDto.getEndereço();
         assertNotNull(addressRequestInfoDto);

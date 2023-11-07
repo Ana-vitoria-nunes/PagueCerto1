@@ -21,7 +21,6 @@ import java.util.UUID;
 @EqualsAndHashCode(of = "id")
 public class Address {
 
-    //obs: fazer a validação do endereçopara ser real, procurar por cep e aparecer automático tentar pfvr
     @Id
     @Column(name = "id_Address")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
