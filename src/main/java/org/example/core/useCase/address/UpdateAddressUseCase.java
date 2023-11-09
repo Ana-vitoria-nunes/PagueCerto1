@@ -28,12 +28,11 @@ public class UpdateAddressUseCase {
         address.getCostumer();
         address.setNumberHouse(addressRequest.getNumeroCasa());
         address.setStreet(addressRequest.getRuaAvenida());
+        address.setCep(addressRequest.getCep());
+        address.setState(addressRequest.getEstado());
+        address.setCity(addressRequest.getCidade());
         address.setNeighborhood(addressRequest.getBairro());
 
         return addressRepository.save(address);
     }
-
-
-
-
 }

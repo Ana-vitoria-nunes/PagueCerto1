@@ -40,7 +40,7 @@ public class CardController {
             if (erro.getMessage().contains(" Detalhe: Key (id_externo_cliente)")){
                 return new ResponseEntity<>(new ResponseDto("O Cliente ja foi cadastrado "),HttpStatus.BAD_REQUEST);
             } else if (erro.getMessage().contains("Key (nome_cartao)")) {
-                return new ResponseEntity<>(new ResponseDto("O nome do cartão já existe"),HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<>(new ResponseDto("O cartão já está cadastrado git "),HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(new ResponseDto("Verifique sua entrada de dados"), HttpStatus.BAD_REQUEST);
         } catch (Exception erro){
@@ -49,7 +49,7 @@ public class CardController {
     }
 
     @GetMapping("/verCard")
-    public ResponseEntity getAddress(){
+    public ResponseEntity getCard(){
         return new ResponseEntity<>(getCardUseCase.findAll(),HttpStatus.OK);
     }
 
