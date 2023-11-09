@@ -40,26 +40,32 @@ public class PaymentService {
             case 1 -> {
                 juros = 0.05;
                 parcela = 2;
+                paymentMapDto.setQuota(parcela);
             }
             case 2 -> {
                 juros = 0.07;
                 parcela = 4;
+                paymentMapDto.setQuota(parcela);
             }
             case 3 -> {
                 juros = 0.09;
                 parcela = 6;
+                paymentMapDto.setQuota(parcela);
             }
             case 4 -> {
                 juros = 0.11;
                 parcela = 8;
+                paymentMapDto.setQuota(parcela);
             }
             case 5 -> {
                 juros = 0.13;
                 parcela = 10;
+                paymentMapDto.setQuota(parcela);
             }
             case 6 -> {
                 juros = 0.15;
                 parcela = 12;
+                paymentMapDto.setQuota(parcela);
 
             }
             default -> new ResponseDto("Opção inválida, tente novamente");
@@ -71,14 +77,11 @@ public class PaymentService {
         paymentDto.setValorTotalParcela(valorTotalParcela);
         paymentDto.setValorTotalEmprestimo(valorTotalEmprestimo);
 
-
-        paymentMapDto.setQuota(requestPayment.getEscolha());
         paymentMapDto.setExternalIdCard(card);
         paymentMapDto.setTotalLending(paymentDto.getValorTotalEmprestimo());
         paymentMapDto.setTotalQuota(paymentDto.getValorTotalParcela());
         paymentMapDto.setDayDebts(paymentMapDto.getDayDebts());
-
-
+        
         LocalDate dateToday = LocalDate.now();
         LocalDate datePaymentChoose = requestPayment.getDatePaymentChoose();
 
